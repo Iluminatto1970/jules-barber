@@ -1,0 +1,819 @@
+/*
+ * Sobrescritas específicas para garantir que o novo design seja aplicado
+ */
+
+/* Força a aplicação da nova fonte */
+body,
+.sidebar-left,
+.header-section {
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* Garante que o menu lateral nunca fique colapsado pelo Bootstrap em telas pequenas */
+.sidebar-left .navbar-collapse.collapse {
+  display: block !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.sidebar-left .navbar-collapse {
+  padding: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Garante que o sidebar tenha o gradiente correto */
+.cbp-spmenu.cbp-spmenu-vertical.cbp-spmenu-left {
+  background: linear-gradient(135deg, #0e3746 0%, #1a4a5c 100%) !important;
+}
+
+/* Correções específicas para mobile: força o menu a aparecer quando abrir */
+@media (max-width: 768px) {
+  .cbp-spmenu-vertical {
+    top: 0 !important;
+    left: -280px !important;
+    width: 280px !important;
+    height: 100vh !important;
+    z-index: 2000 !important;
+    overflow-y: auto !important;
+  }
+
+  .cbp-spmenu-left.cbp-spmenu-open {
+    left: 0 !important;
+  }
+
+  .sidebar-left {
+    width: 280px !important;
+    height: 100vh !important;
+    transform: none !important;
+  }
+
+  .sidebar-menu {
+    display: block !important;
+    padding-bottom: 20px !important;
+  }
+}
+
+/* Força o estilo do cabeçalho */
+.header-section {
+  background: #ffffff !important;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08) !important;
+  border-bottom: 3px solid #be2623 !important;
+}
+
+/* Garante que os links do menu tenham a cor correta */
+.sidebar-menu li a {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.sidebar-menu li a:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border-left: 3px solid #be2623 !important;
+  padding-left: 30px !important;
+}
+
+/* Estilo para o botão do menu */
+button#showLeftPush {
+  background: linear-gradient(135deg, #be2623 0%, #d63031 100%) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 15px rgba(190, 38, 35, 0.3) !important;
+}
+
+button#showLeftPush:hover {
+  background: linear-gradient(135deg, #d63031 0%, #be2623 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(190, 38, 35, 0.4) !important;
+}
+
+/* Área de conteúdo principal */
+#page-wrapper {
+  background: #f8f9fa !important;
+  padding: 25px !important;
+  padding-top: 10px !important;
+  margin-top: 0 !important;
+}
+
+/* Estilo para painéis e cards */
+.panel,
+.widget {
+  background: #ffffff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  margin-bottom: 25px !important;
+  overflow: hidden !important;
+}
+
+.panel-heading {
+  background: linear-gradient(135deg, #be2623 0%, #d63031 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  font-weight: 600 !important;
+}
+
+/* Botões */
+.btn-primary {
+  background: linear-gradient(135deg, #be2623 0%, #d63031 100%) !important;
+  border: none !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 15px rgba(190, 38, 35, 0.3) !important;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #d63031 0%, #be2623 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(190, 38, 35, 0.4) !important;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #00b894 0%, #00a085 100%) !important;
+  border: none !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3) !important;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #00a085 0%, #00b894 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(0, 184, 148, 0.4) !important;
+}
+
+/* Tabelas */
+.table thead th {
+  background: linear-gradient(135deg, #0e3746 0%, #1a4a5c 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  font-size: 12px !important;
+  letter-spacing: 1px !important;
+}
+
+.table tbody tr:hover {
+  background: #f8f9fa !important;
+}
+
+/* Formulários */
+.form-control:focus {
+  border-color: #be2623 !important;
+  box-shadow: 0 0 0 0.2rem rgba(190, 38, 35, 0.25) !important;
+}
+
+/* Modais */
+.modal-header {
+  background: linear-gradient(135deg, #be2623 0%, #d63031 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 10px 10px 0 0 !important;
+}
+
+/* Alertas */
+.alert-success {
+  background: linear-gradient(135deg, #00b894 0%, #00a085 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+/* Navegação breadcrumb */
+.breadcrumb {
+  background: transparent !important;
+  padding: 0 !important;
+  margin-bottom: 20px !important;
+}
+
+.breadcrumb > li + li:before {
+  color: #be2623 !important;
+}
+
+/* Widgets do dashboard */
+.widget-style-1 {
+  background: linear-gradient(135deg, #be2623 0%, #d63031 100%) !important;
+  color: #ffffff !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 20px rgba(190, 38, 35, 0.3) !important;
+}
+
+.widget-style-2 {
+  background: linear-gradient(135deg, #00b894 0%, #00a085 100%) !important;
+  color: #ffffff !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 20px rgba(0, 184, 148, 0.3) !important;
+}
+
+.widget-style-3 {
+  background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%) !important;
+  color: #ffffff !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 20px rgba(253, 203, 110, 0.3) !important;
+}
+
+/* Dropdown do perfil - Design Moderno */
+.profile_details {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 20px !important;
+}
+
+.profile_details_drop {
+  position: relative !important;
+}
+
+.profile_details_drop a.dropdown-toggle {
+  display: flex !important;
+  align-items: center !important;
+  padding: 8px 15px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 25px !important;
+  transition: all 0.3s ease !important;
+  border: 2px solid transparent !important;
+  text-decoration: none !important;
+}
+
+.profile_details_drop a.dropdown-toggle:hover {
+  background: rgba(190, 38, 35, 0.1) !important;
+  border-color: #be2623 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 15px rgba(190, 38, 35, 0.2) !important;
+}
+
+.profile_details_drop .dropdown-menu {
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15) !important;
+  margin-top: 10px !important;
+  min-width: 200px !important;
+  padding: 10px 0 !important;
+}
+
+.profile_details_drop .dropdown-menu li {
+  margin: 0 !important;
+}
+
+.profile_details_drop .dropdown-menu li a {
+  padding: 12px 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  transition: all 0.3s ease !important;
+  border-radius: 0 !important;
+  margin: 2px 8px !important;
+}
+
+.profile_details_drop .dropdown-menu li a:hover {
+  background: linear-gradient(135deg, #be2623 0%, #d63031 100%) !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  transform: translateX(5px) !important;
+}
+
+.profile_details_drop .dropdown-menu li a i {
+  margin-right: 10px !important;
+  width: 16px !important;
+  text-align: center !important;
+  transition: all 0.3s ease !important;
+}
+
+.profile_details_drop .dropdown-menu li a:hover i {
+  transform: scale(1.1) !important;
+}
+
+/* Estilo da imagem de perfil */
+.profile_img span.prfil-img {
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.profile_img span.prfil-img img {
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 50% !important;
+  border: 3px solid #ffffff !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.profile_details_drop:hover .profile_img span.prfil-img img {
+  transform: scale(1.05) !important;
+  border-color: #be2623 !important;
+}
+
+/* Informações do usuário */
+.user-name {
+  margin-left: 12px !important;
+  margin-top: 0 !important;
+  height: auto !important;
+}
+
+.user-name p {
+  margin: 0 !important;
+  font-weight: 600 !important;
+  color: #2d3436 !important;
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+}
+
+.user-name span {
+  font-size: 12px !important;
+  color: #636e72 !important;
+  font-weight: 400 !important;
+  text-transform: capitalize !important;
+}
+
+/* Ícones de seta */
+.profile_details li a i.fa.lnr {
+  margin-left: 10px !important;
+  font-size: 14px !important;
+  color: #636e72 !important;
+  transition: all 0.3s ease !important;
+}
+
+.profile_details_drop:hover li a i.fa.lnr {
+  color: #be2623 !important;
+}
+
+/* Responsividade para o perfil */
+@media (max-width: 768px) {
+  .profile_details {
+    padding: 0 10px !important;
+  }
+
+  .user-name {
+    display: none !important;
+  }
+
+  .profile_details li a i.fa.lnr {
+    display: none !important;
+  }
+
+  .profile_img span.prfil-img img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+/* Notificações - Layout Moderno dos Ícones */
+.nofitications-dropdown {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 8px !important;
+}
+
+.nofitications-dropdown .dropdown-menu {
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15) !important;
+  margin-top: 10px !important;
+  min-width: 320px !important;
+}
+
+/* Estilo moderno para os ícones de notificação */
+li.dropdown.head-dpdn {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 6px !important;
+  padding: 8px 0 !important;
+}
+
+li.dropdown.head-dpdn a.dropdown-toggle {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 45px !important;
+  height: 45px !important;
+  background: linear-gradient(135deg, #be2623 0%, #d63031 100%) !important;
+  border-radius: 12px !important;
+  margin: 0 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 15px rgba(190, 38, 35, 0.3) !important;
+  border: none !important;
+}
+
+li.dropdown.head-dpdn a.dropdown-toggle:hover {
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 8px 25px rgba(190, 38, 35, 0.4) !important;
+  background: linear-gradient(135deg, #d63031 0%, #e74c3c 100%) !important;
+}
+
+li.dropdown.head-dpdn a.dropdown-toggle i {
+  color: #ffffff !important;
+  font-size: 18px !important;
+  transition: all 0.3s ease !important;
+}
+
+li.dropdown.head-dpdn a.dropdown-toggle:hover i {
+  transform: scale(1.1) !important;
+}
+
+/* Badges modernos */
+li.dropdown.head-dpdn .badge {
+  position: absolute !important;
+  top: -8px !important;
+  right: -8px !important;
+  min-width: 22px !important;
+  height: 22px !important;
+  border-radius: 11px !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+  animation: pulse 2s infinite !important;
+}
+
+/* Cores específicas para cada tipo de badge */
+li.dropdown.head-dpdn .badge.text-danger {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%) !important;
+  color: #ffffff !important;
+}
+
+li.dropdown.head-dpdn .badge[style*="background: #2b6b39"] {
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%) !important;
+  color: #ffffff !important;
+}
+
+li.dropdown.head-dpdn .badge[style*="background: #c93504"] {
+  background: linear-gradient(135deg, #e67e22 0%, #f39c12 100%) !important;
+  color: #ffffff !important;
+}
+
+li.dropdown.head-dpdn .badge[style*="background: #22168a"] {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%) !important;
+  color: #ffffff !important;
+}
+
+/* Animação de pulso para badges */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Container das notificações */
+.profile_details_left {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 15px !important;
+}
+
+.profile_details_left ul.nofitications-dropdown {
+  display: flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  li.dropdown.head-dpdn a.dropdown-toggle {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  li.dropdown.head-dpdn a.dropdown-toggle i {
+    font-size: 16px !important;
+  }
+
+  li.dropdown.head-dpdn .badge {
+    min-width: 18px !important;
+    height: 18px !important;
+    font-size: 10px !important;
+    top: -6px !important;
+    right: -6px !important;
+  }
+}
+
+/* Configura scroll da sidebar */
+.sidebar-left {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+.sidebar-left::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.sidebar-left::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 3px !important;
+}
+
+.sidebar-left::-webkit-scrollbar-thumb {
+  background: rgba(190, 38, 35, 0.8) !important;
+  border-radius: 3px !important;
+}
+
+.sidebar-left::-webkit-scrollbar-thumb:hover {
+  background: rgba(190, 38, 35, 1) !important;
+}
+
+/* Para Firefox */
+.sidebar-left {
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(190, 38, 35, 0.8) rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Animações suaves */
+.panel,
+.widget,
+.btn,
+.form-control {
+  transition: all 0.3s ease !important;
+}
+
+/* Responsividade aprimorada */
+@media (max-width: 768px) {
+  #page-wrapper {
+    padding: 15px !important;
+    padding-top: 70px !important; /* Ajuste menor para mobile */
+  }
+
+  .panel {
+    margin-bottom: 15px !important;
+  }
+
+  .header-section {
+    height: auto !important;
+    min-height: 60px !important;
+  }
+}
+
+/* Ajustes para DataTables */
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background: linear-gradient(135deg, #be2623 0%, #d63031 100%) !important;
+  border-color: #be2623 !important;
+  color: #ffffff !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background: linear-gradient(135deg, #d63031 0%, #be2623 100%) !important;
+  border-color: #be2623 !important;
+  color: #ffffff !important;
+}
+
+/* Ajustes para Select2 */
+.select2-container--default .select2-selection--single:focus {
+  border-color: #be2623 !important;
+}
+
+.select2-container--default
+  .select2-results__option--highlighted[aria-selected] {
+  background-color: #be2623 !important;
+}
+
+/* Estilo para badges */
+.badge {
+  border-radius: 20px !important;
+  font-weight: 500 !important;
+}
+
+.badge-primary {
+  background: #be2623 !important;
+}
+
+.badge-success {
+  background: #00b894 !important;
+}
+
+.badge-warning {
+  background: #fdcb6e !important;
+  color: #2d3436 !important;
+}
+
+.badge-danger {
+  background: #e74c3c !important;
+}
+
+/* Ajustes finais para garantir consistência */
+.navbar-inverse {
+  background: transparent !important;
+  border: none !important;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #ffffff !important;
+}
+
+.navbar-inverse .navbar-brand:hover {
+  color: #be2623 !important;
+}
+
+/* Tema claro para o menu lateral */
+.cbp-spmenu.cbp-spmenu-vertical.cbp-spmenu-left,
+.sidebar-left,
+.sidebar-left .navbar,
+.sidebar-left .navbar-collapse {
+  background: #f4f7fb !important;
+  color: #0f172a !important;
+  border-right: 1px solid #dbe4ee !important;
+}
+
+.sidebar-left .navbar-brand,
+.navbar-inverse .navbar-brand {
+  color: #0f172a !important;
+  border-bottom: 1px solid #dbe4ee !important;
+}
+
+.sidebar-left .navbar-brand .fa,
+.sidebar-left .dashboard_text {
+  color: #64748b !important;
+}
+
+.sidebar-menu .header {
+  background: transparent !important;
+  color: #64748b !important;
+  border-bottom: 1px solid #dbe4ee !important;
+}
+
+.sidebar-menu,
+.sidebar-menu > li,
+.sidebar-menu > li > a,
+.sidebar-menu > li > a span {
+  color: #1f2937 !important;
+}
+
+.sidebar-menu > li > a {
+  background: transparent !important;
+  border-left: 3px solid transparent !important;
+}
+
+.sidebar-menu > li > a > i,
+.sidebar-menu > li > a > .fa,
+.sidebar-menu > li > a > .pull-right,
+.sidebar-menu .treeview-menu > li > a > i,
+.sidebar-menu .treeview-menu > li > a > .fa,
+.sidebar-menu .treeview-menu > li > a > .pull-right {
+  color: #475569 !important;
+  opacity: 1 !important;
+}
+
+.sidebar-menu > li:hover > a,
+.sidebar-menu > li.active > a,
+.sidebar-menu > li.menu-open > a {
+  background: #eaf0f7 !important;
+  color: #0f172a !important;
+  border-left-color: #be2623 !important;
+}
+
+.sidebar-menu > li > .treeview-menu {
+  background: #eef3f8 !important;
+  border-top: 1px solid #dbe4ee !important;
+  border-bottom: 1px solid #dbe4ee !important;
+}
+
+.sidebar-menu .treeview-menu > li > a,
+.sidebar-menu .treeview-menu > li > a span {
+  color: #334155 !important;
+}
+
+.sidebar-menu .treeview-menu > li > a:hover,
+.sidebar-menu .treeview-menu > li.active > a {
+  background: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+.sidebar-menu > li[style*="border-top"] {
+  border-top: 1px solid #dbe4ee !important;
+}
+
+.sidebar-left::-webkit-scrollbar-track {
+  background: #e2e8f0 !important;
+}
+
+.sidebar-left::-webkit-scrollbar-thumb {
+  background: #94a3b8 !important;
+}
+
+.sidebar-left::-webkit-scrollbar-thumb:hover {
+  background: #64748b !important;
+}
+
+.sidebar-left {
+  scrollbar-color: #94a3b8 #e2e8f0 !important;
+}
+
+/* Responsividade do painel */
+.mobile-menu-toggle {
+  display: none !important;
+}
+
+.mobile-sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1999;
+}
+
+.mobile-sidebar-overlay.active {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #be2623 0%, #d63031 100%);
+    color: #ffffff;
+    font-size: 18px;
+    box-shadow: 0 8px 22px rgba(190, 38, 35, 0.35);
+    z-index: 2100;
+  }
+
+  .cbp-spmenu-vertical {
+    top: 0 !important;
+    left: -309px !important;
+    width: 280px !important;
+    height: 100vh !important;
+    z-index: 2000 !important;
+    padding-top: 8px !important;
+  }
+
+  .cbp-spmenu-left.cbp-spmenu-open {
+    left: 0 !important;
+  }
+
+  .sidebar-left {
+    width: 280px !important;
+    height: 100vh !important;
+    overflow-y: auto !important;
+    transform: translateX(0) !important;
+  }
+
+  .cbp-spmenu-push div#page-wrapper,
+  #page-wrapper {
+    margin: 0 !important;
+    min-height: 100vh !important;
+    padding: 68px 12px 16px !important;
+  }
+
+  .header-left,
+  .header-right {
+    float: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .dataTables_wrapper {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table {
+    display: block;
+    width: 100% !important;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .table th,
+  .table td {
+    white-space: nowrap;
+  }
+
+  .modal-dialog {
+    width: calc(100% - 20px) !important;
+    margin: 10px auto !important;
+  }
+
+  .modal-content {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .form-control,
+  .select2-container {
+    width: 100% !important;
+  }
+}

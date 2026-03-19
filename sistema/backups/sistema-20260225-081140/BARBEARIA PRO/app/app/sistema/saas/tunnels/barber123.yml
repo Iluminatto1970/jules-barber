@@ -1,0 +1,7 @@
+tunnel: 6cf09e6a-b20b-41f7-9ef6-81f7a09ee289
+credentials-file: /home/iluminatto/.cloudflared/6cf09e6a-b20b-41f7-9ef6-81f7a09ee289.json
+
+ingress:
+  - hostname: barber123.superzap.fun
+    service: http://127.0.0.1:8000
+  - service: http_status:404

@@ -1,0 +1,394 @@
+/* Estilos personalizados para os cards principais da home */
+
+/* Card de Total de Clientes - cor roxa */
+.r3_counter_box.card-clientes {
+  background: linear-gradient(135deg, #7460ee 0%, #8a7fff 100%) !important;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(116, 96, 238, 0.3);
+  transition: all 0.3s ease;
+}
+
+.r3_counter_box.card-clientes:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(116, 96, 238, 0.4);
+}
+
+.r3_counter_box.card-clientes i {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.r3_counter_box.card-clientes h5,
+.r3_counter_box.card-clientes span {
+  color: #ffffff !important;
+}
+
+/* Card de Contas a Pagar - cor vermelha */
+.r3_counter_box.card-pagar {
+  background: linear-gradient(135deg, #fc4b6c 0%, #ff6b8a 100%) !important;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(252, 75, 108, 0.3);
+  transition: all 0.3s ease;
+}
+
+.r3_counter_box.card-pagar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(252, 75, 108, 0.4);
+}
+
+.r3_counter_box.card-pagar i {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.r3_counter_box.card-pagar h5,
+.r3_counter_box.card-pagar span {
+  color: #ffffff !important;
+}
+
+/* Card de Contas a Receber - cor verde */
+.r3_counter_box.card-receber {
+  background: linear-gradient(135deg, #00ad45 0%, #00c851 100%) !important;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 173, 69, 0.3);
+  transition: all 0.3s ease;
+}
+
+.r3_counter_box.card-receber:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 173, 69, 0.4);
+}
+
+.r3_counter_box.card-receber i {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.r3_counter_box.card-receber h5,
+.r3_counter_box.card-receber span {
+  color: #ffffff !important;
+}
+
+/* Card de Produtos Estoque Baixo - cor laranja */
+.r3_counter_box.card-estoque {
+  background: linear-gradient(135deg, #ffb22b 0%, #ffc658 100%) !important;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(255, 178, 43, 0.3);
+  transition: all 0.3s ease;
+}
+
+.r3_counter_box.card-estoque:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 178, 43, 0.4);
+}
+
+.r3_counter_box.card-estoque i {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.r3_counter_box.card-estoque h5,
+.r3_counter_box.card-estoque span {
+  color: #ffffff !important;
+}
+
+/* Card de Saldo do Dia - estilos base */
+.widget:nth-child(5) .r3_counter_box {
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  color: #ffffff;
+}
+
+/* Card de Saldo do Dia - cor dinâmica */
+.r3_counter_box.card-saldo {
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.r3_counter_box.card-saldo i {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.r3_counter_box.card-saldo h5,
+.r3_counter_box.card-saldo span {
+  color: #ffffff !important;
+}
+
+/* Classe para saldo positivo - verde */
+.r3_counter_box.saldo-positivo {
+  background: linear-gradient(135deg, #00ad45 0%, #00c851 100%) !important;
+  box-shadow: 0 4px 15px rgba(0, 173, 69, 0.3) !important;
+}
+
+.r3_counter_box.saldo-positivo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 173, 69, 0.4) !important;
+}
+
+/* Classe para saldo negativo - vermelho rosa */
+.r3_counter_box.saldo-negativo {
+  background: linear-gradient(135deg, #fd5e7c 0%, #ff7a94 100%) !important;
+  box-shadow: 0 4px 15px rgba(253, 94, 124, 0.3) !important;
+}
+
+.r3_counter_box.saldo-negativo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(253, 94, 124, 0.4) !important;
+}
+
+/* ===== CARDS DE ESTATÍSTICAS ===== */
+
+/* Card de Agendamentos - Azul */
+.stat.stat2 .content-top-1 {
+  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat.stat2 .content-top-1::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  transform: rotate(45deg);
+}
+
+.stat.stat2 .content-top-1:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(74, 144, 226, 0.4);
+}
+
+.stat.stat2 .top-content h5 {
+  color: #ffffff !important;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.stat.stat2 .top-content label {
+  color: #ffffff !important;
+  font-size: 28px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Card de Serviços - Verde */
+.stat:nth-child(2) .content-top-1 {
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(39, 174, 96, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat:nth-child(2) .content-top-1::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  transform: rotate(45deg);
+}
+
+.stat:nth-child(2) .content-top-1:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(39, 174, 96, 0.4);
+}
+
+.stat:nth-child(2) .top-content h5 {
+  color: #ffffff !important;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.stat:nth-child(2) .top-content label {
+  color: #ffffff !important;
+  font-size: 28px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Card de Comissões - Roxo */
+.stat:nth-child(3) .content-top-1 {
+  background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(142, 68, 173, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat:nth-child(3) .content-top-1::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  transform: rotate(45deg);
+}
+
+.stat:nth-child(3) .content-top-1:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(142, 68, 173, 0.4);
+}
+
+.stat:nth-child(3) .top-content h5 {
+  color: #ffffff !important;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.stat:nth-child(3) .top-content label {
+  color: #ffffff !important;
+  font-size: 28px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilização dos gráficos de pizza */
+.pie-title-center {
+  position: relative;
+  z-index: 2;
+}
+
+.pie-value {
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 18px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade para os cards de estatísticas */
+@media (max-width: 768px) {
+  .stat .content-top-1 {
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .stat .top-content label {
+    font-size: 24px !important;
+  }
+
+  .stat .top-content h5 {
+    font-size: 14px !important;
+  }
+}
+
+.widget:nth-child(5) .r3_counter_box i {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.widget:nth-child(5) .r3_counter_box h5,
+.widget:nth-child(5) .r3_counter_box span {
+  color: #ffffff !important;
+}
+
+/* Ajustes gerais para todos os cards */
+.widget .r3_counter_box hr {
+  border-color: rgba(255, 255, 255, 0.3);
+  margin: 15px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .widget .r3_counter_box {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .widget .r3_counter_box i {
+    font-size: 20px !important;
+    width: 50px !important;
+    height: 50px !important;
+    line-height: 50px !important;
+  }
+
+  .widget .r3_counter_box h5 {
+    font-size: 18px !important;
+  }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.widget .r3_counter_box {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Efeito de brilho sutil */
+.widget .r3_counter_box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.widget .r3_counter_box {
+  position: relative;
+  overflow: hidden;
+}

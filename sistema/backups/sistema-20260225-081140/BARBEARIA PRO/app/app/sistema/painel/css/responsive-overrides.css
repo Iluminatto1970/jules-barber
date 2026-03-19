@@ -1,0 +1,99 @@
+/* Ajustes responsivos complementares do painel legado */
+
+@media (max-width: 991px) {
+  .main-content {
+    overflow-x: hidden;
+  }
+
+  #page-wrapper {
+    padding: 70px 14px 18px !important;
+  }
+
+  #page-wrapper .panel,
+  #page-wrapper .widget,
+  #page-wrapper .bs-example {
+    margin-bottom: 16px !important;
+  }
+
+  #page-wrapper .table-responsive,
+  #page-wrapper .dataTables_wrapper {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #page-wrapper .dataTables_wrapper .dataTables_length,
+  #page-wrapper .dataTables_wrapper .dataTables_filter {
+    float: none !important;
+    text-align: left !important;
+    margin-bottom: 8px;
+  }
+
+  #page-wrapper .dataTables_wrapper .dataTables_filter input {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0 !important;
+  }
+
+  #page-wrapper .dropdown-menu[style*="margin-left:-230px"],
+  #page-wrapper .dropdown-menu[style*="margin-left:-30px"] {
+    left: auto !important;
+    right: 0 !important;
+    margin-left: 0 !important;
+    min-width: 190px;
+  }
+
+  #page-wrapper [style*="float:left"] {
+    float: none !important;
+    width: 100% !important;
+    margin-right: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  #page-wrapper [style*="position:absolute"][style*="right:35px"] {
+    position: static !important;
+    right: auto !important;
+    display: block;
+    margin-top: 10px;
+  }
+
+  #page-wrapper .modal-dialog {
+    width: calc(100% - 20px) !important;
+    max-width: none !important;
+    margin: 10px auto !important;
+  }
+
+  #page-wrapper .modal-body .row [class*="col-"] {
+    margin-bottom: 10px;
+  }
+
+  #page-wrapper .btn {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 700px) {
+  .esc {
+    display: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #page-wrapper {
+    padding: 66px 10px 14px !important;
+  }
+
+  #page-wrapper .panel-body,
+  #page-wrapper .modal-body {
+    padding: 14px !important;
+  }
+
+  #page-wrapper .modal-footer {
+    display: block;
+    padding: 12px 14px !important;
+  }
+
+  #page-wrapper .modal-footer .btn {
+    width: 100%;
+    margin: 0 0 8px;
+  }
+}

@@ -1,0 +1,3 @@
+# Reconcilia pagamentos SaaS pendentes a cada 5 minutos.
+# Ajuste o caminho absoluto antes de instalar no crontab.
+*/5 * * * * /usr/bin/flock -n /tmp/barbearia-saas-reconcile.lock /usr/bin/php "/caminho/para/app/app/sistema/saas/reconciliar_pagamentos.php" --limit=200 >> /var/log/barbearia-saas-reconciliacao.log 2>&1

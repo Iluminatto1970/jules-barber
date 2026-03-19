@@ -1,0 +1,7 @@
+tunnel: 173c1840-6431-4970-b407-0c3d8f146850
+credentials-file: /home/iluminatto/.cloudflared/173c1840-6431-4970-b407-0c3d8f146850.json
+
+ingress:
+  - hostname: minhabarber.superzap.fun
+    service: http://127.0.0.1:8000
+  - service: http_status:404

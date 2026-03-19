@@ -1,0 +1,21 @@
+2026-02-20T10:15:48Z INF Starting tunnel tunnelID=6cf09e6a-b20b-41f7-9ef6-81f7a09ee289
+2026-02-20T10:15:48Z INF Version 2026.2.0 (Checksum 176746db3be7dc7bd48f3dd287c8930a4645ebb6e6700f883fddda5a4c307c16)
+2026-02-20T10:15:48Z INF GOOS: linux, GOVersion: go1.24.13, GoArch: amd64
+2026-02-20T10:15:48Z INF Settings: map[config:/home/iluminatto/Documents/Dev/Barbearia/BARBEARIA PRO/app/app/sistema/saas/tunnels/barber123.yml cred-file:/home/iluminatto/.cloudflared/6cf09e6a-b20b-41f7-9ef6-81f7a09ee289.json credentials-file:/home/iluminatto/.cloudflared/6cf09e6a-b20b-41f7-9ef6-81f7a09ee289.json]
+2026-02-20T10:15:48Z INF cloudflared will not automatically update if installed by a package manager.
+2026-02-20T10:15:48Z INF Generated Connector ID: 310d4778-6813-428c-9580-712833194f87
+2026-02-20T10:15:48Z INF Initial protocol quic
+2026-02-20T10:15:48Z INF ICMP proxy will use 192.168.1.56 as source for IPv4
+2026-02-20T10:15:48Z INF ICMP proxy will use fe80::91e:4283:6c59:4514 in zone wlx00e02d951496 as source for IPv6
+2026-02-20T10:15:48Z INF ICMP proxy will use 192.168.1.56 as source for IPv4
+2026-02-20T10:15:48Z INF ICMP proxy will use fe80::91e:4283:6c59:4514 in zone wlx00e02d951496 as source for IPv6
+2026-02-20T10:15:48Z INF Starting metrics server on 127.0.0.1:40361/metrics
+2026-02-20T10:15:48Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.23
+2026/02/20 07:15:48 failed to sufficiently increase receive buffer size (was: 208 kiB, wanted: 7168 kiB, got: 416 kiB). See https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes for details.
+2026-02-20T10:15:49Z INF Registered tunnel connection connIndex=0 connection=4abdccac-dd28-417e-a846-174327b67af5 event=0 ip=198.41.200.23 location=gru19 protocol=quic
+2026-02-20T10:15:49Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=1 event=0 ip=198.41.192.57
+2026-02-20T10:15:49Z INF Registered tunnel connection connIndex=1 connection=d5da68d0-0461-4247-977f-e0fc2399da7a event=0 ip=198.41.192.57 location=for01 protocol=quic
+2026-02-20T10:15:50Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=2 event=0 ip=198.41.200.113
+2026-02-20T10:15:50Z INF Registered tunnel connection connIndex=2 connection=c93c9b4b-7bfa-478f-ae7a-16a17682a8c8 event=0 ip=198.41.200.113 location=gru08 protocol=quic
+2026-02-20T10:15:51Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=3 event=0 ip=198.41.192.7
+2026-02-20T10:15:51Z INF Registered tunnel connection connIndex=3 connection=5b7964ca-75c2-42c7-a2eb-18c5a1245264 event=0 ip=198.41.192.7 location=for01 protocol=quic

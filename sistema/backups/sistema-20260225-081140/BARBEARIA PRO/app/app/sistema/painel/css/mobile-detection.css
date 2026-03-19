@@ -1,0 +1,166 @@
+/* Estilos para detecção de dispositivo móvel */
+
+/* Blur no fundo quando dispositivo móvel é detectado */
+.mobile-device .main-content,
+.mobile-device .cbp-spmenu {
+    filter: blur(10px);
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Overlay para dispositivos móveis - tela cheia com blur */
+.mobile-warning-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 99999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.mobile-warning-content {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.mobile-warning-content .warning-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    display: block;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.mobile-warning-content h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-warning-content p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.mobile-warning-content .device-list {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 25px 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-warning-content .device-list h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.mobile-warning-content .device-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-warning-content .device-list li {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 8px 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-warning-content .device-list li::before {
+    content: "✓";
+    color: #4CAF50;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.mobile-warning-content .footer-text {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+}
+
+/* Estilos responsivos para telas pequenas */
+@media (max-width: 768px) {
+    body {
+        overflow-x: auto;
+    }
+    
+    .main-content {
+        min-width: 1200px;
+    }
+    
+    .sidebar-left {
+        position: fixed;
+        z-index: 1000;
+    }
+    
+    /* Adicionar aviso visual no topo */
+    .mobile-notice {
+        background-color: #f39c12;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1001;
+        font-weight: bold;
+    }
+}
+
+/* Detectar orientação do dispositivo */
+@media (orientation: portrait) and (max-width: 768px) {
+    .orientation-warning {
+        background-color: #e74c3c;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1002;
+        font-weight: bold;
+    }
+}

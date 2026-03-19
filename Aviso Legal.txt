@@ -1,0 +1,16 @@
+📜 Disclaimer / Aviso Legal
+
+Este código foi adquirido sob a Licença GPL (General Public License).
+De acordo com os termos da licença, você é livre para utilizar, modificar e instalar este código em quantos domínios desejar, sem restrições de quantidade.
+
+⚠️ Aviso Importante
+
+Não somos parceiros, afiliados ou representantes oficiais de nenhum dos desenvolvedores do código disponibilizado em nosso site.
+
+Todo o código aqui disponibilizado é de autoria de terceiros.
+
+A responsabilidade pelo uso, instalação, personalização e eventuais impactos técnicos ou legais decorrentes da utilização do código é exclusivamente do usuário.
+
+Garantias, suporte técnico e atualizações oficiais não estão inclusos, sendo de responsabilidade dos desenvolvedores originais.
+
+Ao utilizar este material, você declara estar ciente e de acordo com os termos acima.

@@ -1,0 +1,7 @@
+tunnel: 10626efc-0fd1-4c8a-b0e8-622f007fac90
+credentials-file: /home/iluminatto/.cloudflared/10626efc-0fd1-4c8a-b0e8-622f007fac90.json
+
+ingress:
+  - hostname: demo-saas.superzap.fun
+    service: http://127.0.0.1:8000
+  - service: http_status:404

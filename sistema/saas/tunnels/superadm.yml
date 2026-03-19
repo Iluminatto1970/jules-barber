@@ -1,0 +1,7 @@
+tunnel: aa947ac1-6a3c-4015-bd86-956d717cb865
+credentials-file: /home/iluminatto/.cloudflared/aa947ac1-6a3c-4015-bd86-956d717cb865.json
+
+ingress:
+  - hostname: superadm.superzap.fun
+    service: http://127.0.0.1:8000
+  - service: http_status:404

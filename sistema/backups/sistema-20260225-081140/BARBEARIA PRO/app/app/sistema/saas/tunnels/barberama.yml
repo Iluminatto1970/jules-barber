@@ -1,0 +1,7 @@
+tunnel: 7115d079-40ef-42c2-8ff2-a26ffff79534
+credentials-file: /home/iluminatto/.cloudflared/7115d079-40ef-42c2-8ff2-a26ffff79534.json
+
+ingress:
+  - hostname: barberama.0.1
+    service: http://127.0.0.1:8000
+  - service: http_status:404
