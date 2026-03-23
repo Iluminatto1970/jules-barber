@@ -192,6 +192,35 @@ body {
   color: white;
 }
 
+.demo-access {
+  background: #fff5f4;
+  border: 1px dashed rgba(190, 38, 35, 0.35);
+  border-radius: 10px;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.demo-access small {
+  color: #6b2422;
+  display: block;
+}
+
+.btn-demo-fill {
+  background: #ffffff;
+  border: 1px solid #be2623;
+  color: #be2623;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 9px 12px;
+  transition: all 0.2s ease;
+}
+
+.btn-demo-fill:hover,
+.btn-demo-fill:focus {
+  background: #be2623;
+  color: #ffffff;
+}
+
 /* Recovery Link */
 .recuperar-link {
   color: #be2623;

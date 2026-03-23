@@ -82,7 +82,7 @@ if($total_reg == 0){
                                  <p class="text-white-50">Faça login para acessar o painel administrativo</p>
                              </div>
                             
-                            <form accept-charset="UTF-8" role="form" action="autenticar.php" method="post">
+                            <form id="form-login-sistema" accept-charset="UTF-8" role="form" action="autenticar.php" method="post">
                                 <div class="form-group mb-3">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
@@ -90,7 +90,7 @@ if($total_reg == 0){
                                                 <i class="fa fa-user"></i>
                                             </span>
                                         </div>
-                                        <input class="form-control" placeholder="E-mail ou CPF" name="email" type="text" required>
+                                        <input id="login-email" class="form-control" placeholder="E-mail ou CPF" name="email" type="text" required>
                                     </div>
                                 </div>
                                 
@@ -101,11 +101,20 @@ if($total_reg == 0){
                                                 <i class="fa fa-lock"></i>
                                             </span>
                                         </div>
-                                        <input class="form-control" placeholder="Senha" name="senha" type="password" required>
+                                        <input id="login-senha" class="form-control" placeholder="Senha" name="senha" type="password" required>
                                     </div>
                                 </div>
+
+                                <div class="demo-access mb-4">
+                                    <small>
+                                        Acesso de demonstracao: <strong>admin@admin</strong> | Senha: <strong>123</strong>
+                                    </small>
+                                    <button type="button" id="preencher-demo" class="btn btn-demo-fill btn-block mt-2">
+                                        <i class="fa fa-magic mr-1"></i>Preencher acesso demo
+                                    </button>
+                                </div>
                                 
-                                <button class="btn btn-login btn-block mb-3" type="submit">
+                                <button id="btn-entrar-sistema" class="btn btn-login btn-block mb-3" type="submit">
                                     <i class="fa fa-sign-in mr-2"></i>Entrar no Sistema
                                 </button>
                             </form>
@@ -299,6 +308,17 @@ if($total_reg == 0){
 				$('#mensagem-cadastro-saas').text('Erro de comunicacao ao criar conta SaaS.');
 			}
 		});
+	});
+</script>
+
+<script type="text/javascript">
+	$("#preencher-demo").on("click", function () {
+		$("#login-email").val("admin@admin");
+		$("#login-senha").val("123");
+		$("#btn-entrar-sistema").focus();
+		setTimeout(function () {
+			$("#form-login-sistema").trigger("submit");
+		}, 150);
 	});
 </script>
 
