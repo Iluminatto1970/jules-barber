@@ -1,0 +1,43 @@
+services:
+  db:
+    image: mariadb:11
+    container_name: jules-barber-db
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD:-root123}
+      APP_DB_PASS: ${APP_DB_PASS:-app123}
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./docker/mysql/init/01-init-multidb.sh:/docker-entrypoint-initdb.d/01-init-multidb.sh:ro
+      - ./sistema/backups/barbearia-20260225-080849.sql:/seed/barbearia.sql:ro
+      - ./sistema/backups/barbearia_saas-20260225-080856.sql:/seed/barbearia_saas.sql:ro
+    healthcheck:
+      test: ["CMD", "mariadb-admin", "ping", "-h", "localhost", "-uroot", "-p${MARIADB_ROOT_PASSWORD:-root123}"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jules-barber-app
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      PORT: 8000
+      DB_HOST: ${DB_HOST:-db}
+      DB_NAME: ${DB_NAME:-barbearia}
+      DB_USER: ${DB_USER:-barbearia_app}
+      DB_PASS: ${DB_PASS:-app123}
+      SAAS_DB_HOST: ${SAAS_DB_HOST:-db}
+      SAAS_DB_NAME: ${SAAS_DB_NAME:-barbearia_saas}
+      SAAS_DB_USER: ${SAAS_DB_USER:-barbearia_app}
+      SAAS_DB_PASS: ${SAAS_DB_PASS:-app123}
+    ports:
+      - "8000:8000"
+
+volumes:
+  db_data:

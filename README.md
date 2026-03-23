@@ -42,6 +42,38 @@ Um sistema completo de gestão para barbearias desenvolvido em PHP com MySQL, of
 - **Sistema de Sessões** para autenticação
 - **DOMPDF** para geração de relatórios
 
+## ☁️ Deploy no Render
+
+Este repositório já está preparado para deploy no Render usando Docker:
+
+- `Dockerfile` para subir o app PHP
+- `render.yaml` com serviço web e variáveis de ambiente
+
+### Passos
+
+1. Suba este repositório para o GitHub.
+2. No Render, crie um **Web Service** conectando o repositório.
+3. O Render vai detectar `render.yaml` automaticamente.
+4. Use `.env.render.example` como referência e configure as variáveis no painel do Render:
+
+```env
+DB_HOST=
+DB_NAME=
+DB_USER=
+DB_PASS=
+
+SAAS_DB_HOST=
+SAAS_DB_NAME=
+SAAS_DB_USER=
+SAAS_DB_PASS=
+```
+
+No Render, use banco MySQL externo e senhas fortes.
+
+### Observação importante
+
+O Render não oferece MySQL gerenciado nativo. Para produção, use um MySQL externo (Railway, Aiven, PlanetScale, VPS com MariaDB, etc.) e preencha as variáveis acima com esse servidor.
+
 ## 📋 Pré-requisitos
 
 - **XAMPP** ou servidor web com PHP 7.0+
@@ -76,6 +108,68 @@ Um sistema completo de gestão para barbearias desenvolvido em PHP com MySQL, of
 4. **Acesse o sistema**:
    - Frontend: `http://localhost/barbearia`
    - Backend: `http://localhost/barbearia/sistema`
+
+## 🐳 Rodar com Docker Compose (mais prático)
+
+Se quiser subir tudo local com um comando (app + MariaDB + carga dos dumps):
+
+1. Gere o `.env` local (uma vez):
+
+```bash
+cp .env.example .env
+```
+
+2. Suba tudo com um comando:
+
+```bash
+docker compose up -d --build
+```
+
+Ou, se preferir, use os atalhos via `Makefile`:
+
+```bash
+make up
+```
+
+3. Abra no navegador:
+
+- Frontend: `http://localhost:8000`
+- Backend: `http://localhost:8000/sistema`
+
+4. Parar ambiente:
+
+```bash
+docker compose down
+```
+
+5. Resetar banco e recriar do zero (apaga dados):
+
+```bash
+docker compose down -v
+docker compose up -d --build
+```
+
+6. Rodar checklist funcional automático (smoke test):
+
+```bash
+make smoke
+```
+
+Comandos rápidos do `Makefile`:
+
+- `make up` (sobe stack)
+- `make down` (desce stack)
+- `make reset` (recria banco)
+- `make logs` (logs app + db)
+- `make ps` (status dos serviços)
+- `make smoke` (validação funcional)
+
+Variáveis opcionais:
+
+- `MARIADB_ROOT_PASSWORD` (padrão: `root123`)
+- `APP_DB_PASS` (padrão: `app123`)
+- `DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS`
+- `SAAS_DB_HOST`, `SAAS_DB_NAME`, `SAAS_DB_USER`, `SAAS_DB_PASS`
 
 ## ⚠️ Erro 502 / Bad Gateway
 

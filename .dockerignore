@@ -1,0 +1,8 @@
+.git
+.github
+sistema/backups
+node_modules
+*.log
+.env
+.env.*
+.DS_Store

@@ -3,16 +3,22 @@
 date_default_timezone_set('America/Sao_Paulo');
 
 // Credenciais do banco dos tenants (fallback single-tenant)
-$servidor = '127.0.0.1';
-$banco = 'barbearia';
-$usuario = 'barbearia_app';
-$senha = '@Vito4747';
+$servidor = getenv('DB_HOST') ?: '127.0.0.1';
+$banco = getenv('DB_NAME') ?: 'barbearia';
+$usuario = getenv('DB_USER') ?: 'barbearia_app';
+$senha = getenv('DB_PASS');
+if ($senha === false) {
+	$senha = '';
+}
 
 // Credenciais do banco de controle SaaS
-$saas_servidor = '127.0.0.1';
-$saas_banco = 'barbearia_saas';
-$saas_usuario = 'barbearia_app';
-$saas_senha = '@Vito4747';
+$saas_servidor = getenv('SAAS_DB_HOST') ?: '127.0.0.1';
+$saas_banco = getenv('SAAS_DB_NAME') ?: 'barbearia_saas';
+$saas_usuario = getenv('SAAS_DB_USER') ?: $usuario;
+$saas_senha = getenv('SAAS_DB_PASS');
+if ($saas_senha === false) {
+	$saas_senha = $senha;
+}
 
 require_once(__DIR__ . '/saas/lib.php');
 require_once(__DIR__ . '/saas/planos_guard.php');
@@ -138,10 +144,10 @@ if ($is_super_admin_host && !$is_saas_admin_path) {
 
 if ($is_saas_admin_path) {
     define('SAAS_ADMIN_APP', true);
-    $saas_servidor = '127.0.0.1';
-    $saas_banco = 'barbearia_saas';
-    $saas_usuario = 'barbearia_app';
-    $saas_senha = '@Vito4747';
+    $saas_servidor = getenv('SAAS_DB_HOST') ?: $saas_servidor;
+    $saas_banco = getenv('SAAS_DB_NAME') ?: $saas_banco;
+    $saas_usuario = getenv('SAAS_DB_USER') ?: $saas_usuario;
+    $saas_senha = getenv('SAAS_DB_PASS') !== false ? getenv('SAAS_DB_PASS') : $saas_senha;
     
     $pdo_saas = saas_mysql_conectar($saas_banco, $saas_servidor, $saas_usuario, $saas_senha, $erro);
     if (!$pdo_saas) {
